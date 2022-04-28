@@ -32,9 +32,9 @@ pipeline {
                     sh "echo pom_toupdate version is $pom_toupdate"
                     //def newpomversion = "${pom_toupdate}${BLD_NUMBER}"
                     //println(newpomversion)
-                    def buildnumber = "$(env.BUILD_NUMBER)"
+                    //def buildnumber = "$(env.BUILD_NUMBER)"
                     def pom_toupdate_trim = pom_toupdate.trim()
-                    def newpomversion = pom_toupdate_trim + '' + buildnumber
+                    def newpomversion = pom_toupdate_trim + '' + BLD_NUMBER
                     println(newpomversion)
                     //println pom_toupdate_trim + BLD_NUMBER
 

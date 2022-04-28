@@ -36,6 +36,7 @@ pipeline {
                     def pom_toupdate_trim = pom_toupdate.trim()
                     def newpomversion = pom_toupdate_trim + '' + BLD_NUMBER
                     println(newpomversion)
+                    echo "newpomverwsion is $newpomversion"
                     //println pom_toupdate_trim + BLD_NUMBER
 
              }

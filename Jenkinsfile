@@ -36,10 +36,10 @@ pipeline {
                     def pom_toupdate_trim = pom_toupdate.trim()
                     def newpomversion = pom_toupdate_trim + '' + BLD_NUMBER
                     println(newpomversion)
-                    echo "newpomverwsion is $newpomversion"
+                    echo "newpomversion is $newpomversion"
                     echo "UPDATING POM VERSION...."
                     sleep 2
-                    def newpomversion_trim = newpomverwsion.trim()
+                    def newpomversion_trim = newpomversion.trim()
                     sh "mvn versions:set -DnewVersion=$newpomversion_trim"
                     //println pom_toupdate_trim + BLD_NUMBER
 
